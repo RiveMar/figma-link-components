@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "description": "Figma 组件到代码组件的映射配置",
+  "mappings": [
+    {
+      "figmaPattern": "Button",
+      "componentPath": "@/components/ui/button",
+      "componentName": "Button",
+      "propsMapping": {
+        "variant": {
+          "figmaProperty": "Variant",
+          "valueMap": {
+            "Primary": "default",
+            "Secondary": "secondary",
+            "Outline": "outline",
+            "Ghost": "ghost",
+            "Destructive": "destructive",
+            "Link": "link"
+          }
+        },
+        "size": {
+          "figmaProperty": "Size",
+          "valueMap": {
+            "Small": "sm",
+            "Default": "default",
+            "Large": "lg",
+            "Icon": "icon"
+          }
+        }
+      }
+    },
+    {
+      "figmaPattern": "Input",
+      "componentPath": "@/components/ui/input",
+      "componentName": "Input",
+      "propsMapping": {
+        "type": {
+          "figmaProperty": "Type",
+          "valueMap": {
+            "Text": "text",
+            "Password": "password",
+            "Email": "email",
+            "Number": "number"
+          }
+        },
+        "placeholder": {
+          "figmaProperty": "Placeholder",
+          "valueMap": null
+        }
+      }
+    },
+    {
+      "figmaPattern": "Card",
+      "componentPath": "@/components/ui/card",
+      "componentName": "Card",
+      "propsMapping": {},
+      "subComponents": {
+        "header": "CardHeader",
+        "title": "CardTitle",
+        "description": "CardDescription",
+        "content": "CardContent",
+        "footer": "CardFooter"
+      }
+    },
+    {
+      "figmaPattern": "Avatar",
+      "componentPath": "@/components/ui/avatar",
+      "componentName": "Avatar",
+      "propsMapping": {
+        "size": {
+          "figmaProperty": "Size",
+          "valueMap": {
+            "Small": "h-8 w-8",
+            "Default": "h-10 w-10",
+            "Large": "h-14 w-14"
+          }
+        }
+      },
+      "subComponents": {
+        "image": "AvatarImage",
+        "fallback": "AvatarFallback"
+      }
+    },
+    {
+      "figmaPattern": "Badge",
+      "componentPath": "@/components/ui/badge",
+      "componentName": "Badge",
+      "propsMapping": {
+        "variant": {
+          "figmaProperty": "Variant",
+          "valueMap": {
+            "Default": "default",
+            "Secondary": "secondary",
+            "Destructive": "destructive",
+            "Outline": "outline"
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "defaultExport": true,
+    "useTypeScript": true,
+    "styleFramework": "tailwind",
+    "importAlias": "@"
+  }
+}
